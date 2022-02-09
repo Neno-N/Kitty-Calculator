@@ -1,3 +1,11 @@
+
+:root {
+    --pink: #cc1a7c;
+    --white: #e9e3e3;
+    --greyWhite: #cccccc;
+    --black: #181818;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,8 +16,11 @@
 body {
     font-family: sans-serif;
     font-size: 1rem;
-    background-color: #e9e3e3;
+    background-color: var(--white);
+    position: relative;
 }
+
+
 
 /*------- Calculator-------*/
 .calc-container{
@@ -20,15 +31,16 @@ body {
     margin: 1% auto;
     border-radius: 30px;
     padding: 30px;
-    box-shadow: inset 2px 2px 10px #cc1a7c,
-                        2px 2px 5px #cccccc;
+    background-color: var(--white);
+    box-shadow: inset 2px 2px 10px var(--pink),
+                        2px 2px 5px var(--greyWhite);
 }
 
 /*---Screen Display---*/
 
 .display {
-    box-shadow: inset 2px 2px 10px #cc1a7c,
-                        2px 2px 5px #cccccc;
+    box-shadow: inset 2px 2px 10px var(--pink),
+                        2px 2px 5px var(--greyWhite);
     color: #181818;
     border-radius: 30px;
     padding: 3%;
@@ -59,8 +71,8 @@ body {
     font-size: 1.5rem;
     color: #181818;
     outline: none;
-    box-shadow: inset -2px -2px 10px #cccccc,
-                -2px -2px 5px #cc1a7c;
+    box-shadow: inset -2px -2px 10px var(--greyWhite),
+                -2px -2px 5px var(--pink);
     cursor: pointer;
     border-radius: 50px;
     margin: 2%;
@@ -72,19 +84,247 @@ body {
 }
 
 .btn:hover {
-    background-color: #cc1a7c;
-    color: #cccccc;
-    box-shadow: 0px 0px 1px #181818;
+    background-color: var(--pink);
+    color: var(--greyWhite);
+    box-shadow: 0px 0px 1px var(--black);
 }
+/*-------Kitty-------*/
+.decor-shapes{
+    z-index: -99;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding: 0.5%;
+    border-bottom: 5px dotted var(--black);
+}
+.body {
+    position: relative;
+    height: 150px;
+    width: 300px;
+    filter: drop-shadow(0px 8px 0px #5e5b5b8c);
+    animation: move 30s linear infinite;
+}
+
+/*---Head---*/
+
+.head {
+    width: 35%;
+    height: 50%;
+}
+
+.ears{
+    height: 35%;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ear{
+    height: 60%;
+    width: 30%;
+    border-top: 10px solid var(--pink);
+    border-left: 10px solid var(--pink);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 2px;
+}
+
+.ear2 {
+    left: 10px;
+}
+
+.face{
+    height: 60%;
+    width: 65%;
+    margin: 0 auto;
+    border-radius: 20px;
+    transform: rotate(30deg);
+    background-color: var(--pink);
+    position: relative;
+    top: -12.5%;
+    left: -5%;
+}
+
+.main {
+    height: 70%;
+    width: 70%;
+    border-radius: 70px;
+    position: absolute;
+    top: 15%;
+    left: -10%;
+}
+
+.nose{
+    background-color: var(--pink);
+    height: 35%;
+    width: 35%;
+    position: absolute;
+    top: 70%;
+    left: -1%;
+    border-radius: 0 0 0 50%;
+    transform: rotate(-20deg);
+}
+
+.nose-piece {
+    background-color: transparent;
+    height: 60%;
+    width: 60%;
+    border-radius: 40%;
+    position: absolute;
+    top: -78%;
+    left: -33%;
+    transform: rotate(48deg);
+    box-shadow: 10px 0px 0px var(--pink);
+}
+
+/*---Bawdy---*/
+.bawdy{
+    height: 50%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    top: -12%;
+    left: 15%;
+}
+
+.legs {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.leg{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.upperLeg{
+    background-color: var(--pink);
+    height: 85%;
+    width: 100%;
+    border-radius: 45%;
+    transform: rotate(30deg);
+}
+
+.leg2{
+    position: absolute;
+    left: 60%;
+    top: -10%;
+    transform: rotate(-60deg);
+    animation: hindLegs 2s ease infinite;
+}
+
+.leg1{
+    animation: frontLegs 2s ease infinite;
+}
+
+.lowerLeg {
+    background-color: var(--pink);
+    height: 60%;
+    width: 60%;
+    border-radius: 0px 0px 5px 5px;
+    transform: rotate(30deg);
+    position: absolute;
+    top: 60%;
+    left: -50%;
+}
+
+.foot{
+    height: 15%;
+    width: 80%;
+    background-color: var(--pink);
+    position: absolute;
+    top: 105%;
+    left: -110%;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.leg2 .foot {
+    transform: rotate(30deg);
+    left: -110%;
+    top: 97%;
+}
+
+.belly {
+    background-color: var(--pink);
+    width: 60%;
+    height: 80%;
+    border-radius: 50px 100px 100px 100px;
+    position: absolute;
+    top: -35%;
+    left: 5%;
+}
+
+#backLegs{
+    left: 28%;
+}
+
+.tail{
+    background-color: transparent;
+    height: 60%;
+    width: 70%;
+    position: absolute;
+    top: -70%;
+    left: 28%;
+    border-radius: 50%;
+    transform: rotate(40deg);
+    border-right: 8px solid var(--pink);
+    border-top: 8px solid var(--pink);
+}
+
+
+
+/*-------End of Decor Shapes-------*/
+
+/*-------Animations-------*/
+@keyframes hindLegs {
+    50% {transform: rotate(10deg);
+        transform: translateX(-40px);
+    }
+    
+}
+
+@keyframes frontLegs {
+    50% {transform: rotate(-35deg) translateX(30px);
+    }
+    
+}
+
+@keyframes move {
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+
+
+
+
+
+/*-------End of Animations-------*/
+
+/*-------Media query -------*/
 
 @media (max-width:700px){
     .calc-container{
         max-width: 60%;
     }
+    .decor-shapes{
+        transform: scale(0.35);
+        bottom: -17%;
+        right: -10%;
+    }
 }
+
 
 @media (max-width:450px){
     .calc-container{
         max-width: 90%;
+    }
+    .decor-shapes{
+        bottom: -18%;
     }
 }

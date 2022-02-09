@@ -113,6 +113,11 @@ window.addEventListener('keydown', (e)=>{
         e.key === '=' || e.key == 'Enter'
     ){
         clickButton4(e.key);
+    }
+    else if (
+        e.key == 'Backspace'
+    ){
+        clickButton5(e.key)
     };
 
 })
@@ -170,5 +175,6 @@ function clickButton4 (key) {
     equals.click();
 };
 
-
-
+function clickButton5 (key) {
+    del.click();
+};
