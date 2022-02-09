@@ -95,14 +95,13 @@ body {
     bottom: 0;
     right: 10px;
     padding: 0.5%;
-    border-bottom: 5px dotted var(--black);
 }
 .body {
     position: relative;
     height: 150px;
     width: 300px;
     filter: drop-shadow(0px 8px 0px #5e5b5b8c);
-    animation: move 30s linear infinite;
+    animation: move 30s ease infinite;
 }
 
 /*---Head---*/
@@ -214,11 +213,11 @@ body {
     left: 60%;
     top: -10%;
     transform: rotate(-60deg);
-    animation: hindLegs 2s ease infinite;
+    animation: hindLegs .8s ease infinite;
 }
 
 .leg1{
-    animation: frontLegs 2s ease infinite;
+    animation: frontLegs .8s ease infinite;
 }
 
 .lowerLeg {
@@ -295,7 +294,7 @@ body {
 
 @keyframes move {
     100%{
-        transform: translateX(-200%);
+        transform: translateX(-500%);
     }
 }
 
